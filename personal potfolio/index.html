@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRITI — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ════════ CURSOR SYSTEM ════════ -->
+    <canvas id="smoke-canvas"></canvas>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- ════════ BACKGROUND PARTICLES ════════ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ════════ TOAST NOTIFICATION ════════ -->
+    <div id="toast"></div>
+
+    <!-- ════════ NAV ════════ -->
+    <nav>
+        <div class="nav-logo">PRITI'S PORTFOLIO<span>.</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ════════ HERO ════════ -->
+    <section id="home">
+        <div class="hero-left">
+            <div class="badge"><span class="badge-dot"></span>Available for work</div>
+            <h1 class="hero-name">
+                Hi, I'm<br>
+                <span class="a1">Pri</span><span class="a2">ti</span>
+            </h1>
+            <div class="typed-row">
+                <span class="typed-label">I am a passionate</span>
+                <span id="element"></span>
+            </div>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary" data-magnetic>View Projects</a>
+                <a href="#contact"  class="btn-outline"  data-magnetic>Contact Me</a>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-num">5+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-num">2+</div>
+                    <div class="stat-label">Months Exp.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="img-wrap">
+                <img src="MY PHOTO 7.png" alt="Priti">
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            scroll
+        </div>
+    </section>
+
+    <!-- ════════ ABOUT ════════ -->
+    <section id="about" class="section">
+        <p class="section-label reveal">Who I Am</p>
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+        <div class="about-grid">
+            <div class="about-text reveal-left">
+                <p>Hello! I'm <strong>Priti</strong>, a passionate creative based in India. I love building beautiful, functional digital experiences that leave a lasting impression.</p>
+                <p>With a strong eye for design and a love for clean code, I bridge the gap between aesthetics and functionality — crafting websites and visuals that feel great to use.</p>
+                <p>When I'm not designing or coding, I'm exploring new tools, creating content, and constantly learning something new in the ever-evolving world of tech and design.</p>
+            </div>
+            <div class="about-cards reveal-right">
+                <div class="about-card">
+                    <div class="about-icon">🎨</div>
+                    <div>
+                        <h4>Design-first Mindset</h4>
+                        <p>Every pixel matters. I obsess over details to create polished interfaces.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💻</div>
+                    <div>
+                        <h4>Clean Code</h4>
+                        <p>Semantic, maintainable code that's as elegant as the designs I build.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🚀</div>
+                    <div>
+                        <h4>Always Learning</h4>
+                        <p>Tech evolves fast — I stay ahead by exploring new tools and trends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ SKILLS ════════ -->
+    <section id="skills" class="section">
+        <p class="section-label reveal">What I Do</p>
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+        <div class="skills-grid">
+
+            <div class="skill-card reveal">
+                <div class="skill-top">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="skill-bars">
+                    <div>
+                        <div class="skill-row-info"><span>HTML / CSS</span><span>90%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>JavaScript</span><span>75%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>React</span><span>65%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card reveal" style="transition-delay: 0.1s">
+                <div class="skill-top">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UI / UX Design</h3>
+                </div>
+                <div class="skill-bars">
+                    <div>
+                        <div class="skill-row-info"><span>Figma</span><span>85%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>Wireframing</span><span>80%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>Prototyping</span><span>78%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card reveal" style="transition-delay: 0.2s">
+                <div class="skill-top">
+                    <div class="skill-icon">✏️</div>
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="skill-bars">
+                    <div>
+                        <div class="skill-row-info"><span>Photoshop</span><span>82%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>Canva</span><span>92%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card reveal" style="transition-delay: 0.3s">
+                <div class="skill-top">
+                    <div class="skill-icon">📱</div>
+                    <h3>Web Design</h3>
+                </div>
+                <div class="skill-bars">
+                    <div>
+                        <div class="skill-row-info"><span>Responsive Design</span><span>88%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>Visual Design</span><span>72%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="72"></div></div>
+                    </div>
+                    <div>
+                        <div class="skill-row-info"><span>UI Design</span><span>80%</span></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════ PROJECTS ════════ -->
+    <section id="projects" class="section">
+        <p class="section-label reveal">My Work</p>
+        <h2 class="section-title reveal">Recent <span>Projects</span></h2>
+        <div class="projects-grid">
+
+            <div class="project-card reveal">
+                <div class="project-thumb" style="background: linear-gradient(135deg,#1a0a30,#3d1155);">🛍️</div>
+                <div class="project-body">
+                    <span class="project-tag">Web Design</span>
+                    <h3>E-Commerce Landing Page</h3>
+                    <p>A modern, conversion-optimized landing page for a fashion brand with smooth animations and bold visuals.</p>
+                </div>
+            </div>
+
+            <div class="project-card reveal" style="transition-delay: 0.12s">
+                <div class="project-thumb" style="background: linear-gradient(135deg,#0d1a35,#1a0a40);">📊</div>
+                <div class="project-body">
+                    <span class="project-tag">UI/UX Design</span>
+                    <h3>Analytics Dashboard</h3>
+                    <p>A clean, data-rich dashboard UI designed in Figma with an intuitive layout for business insights.</p>
+                </div>
+            </div>
+
+            <div class="project-card reveal" style="transition-delay: 0.24s">
+                <div class="project-thumb" style="background: linear-gradient(135deg,#1a1020,#2a0a35);">🎨</div>
+                <div class="project-body">
+                    <span class="project-tag">Graphic Design</span>
+                    <h3>Brand Identity Kit</h3>
+                    <p>Complete branding package — logo, color palette, typography, and social media templates.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════ CONTACT ════════ -->
+    <section id="contact" class="section">
+        <p class="section-label reveal">Get In Touch</p>
+        <h2 class="section-title reveal">Contact <span>Me</span></h2>
+        <div class="contact-wrap">
+
+            <div class="contact-info reveal-left">
+                <h3>Let's work together!</h3>
+                <p>Have a project in mind or just want to say hi? Fill the form or reach me through any of the channels below. I usually reply within 24 hours.</p>
+                <div class="contact-links">
+                    <a href="mailto:priti.shreyashi.halder@gmail.com" class="contact-link">
+                        <div class="contact-link-icon">📧</div>
+                        <div>
+                            <div class="cl-label">Email</div>
+                            <div class="cl-val">priti.shreyashi.halder@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/priti-halder-72356937a/" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-link-icon">💼</div>
+                        <div>
+                            <div class="cl-label">LinkedIn</div>
+                            <div class="cl-val">linkedin.com/in/priti-halder</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/pritis-tech" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-link-icon">🐙</div>
+                        <div>
+                            <div class="cl-label">GitHub</div>
+                            <div class="cl-val">github.com/pritis-tech</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formspree form — action points to your endpoint -->
+            <form
+                id="contactForm"
+                class="contact-form reveal-right"
+                action="https://formspree.io/f/mrerjnlg"
+                method="POST"
+            >
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">Name</label>
+                        <input type="text" id="fname" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="femail">Email</label>
+                        <input type="email" id="femail" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fsubject">Subject</label>
+                    <input type="text" id="fsubject" name="subject" placeholder="What's this about?" required>
+                </div>
+                <div class="form-group">
+                    <label for="fmessage">Message</label>
+                    <textarea id="fmessage" name="message" placeholder="Tell me about your project…" required></textarea>
+                </div>
+                <button class="btn-send" id="sendBtn" type="submit">Send Message ✉️</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- ════════ FOOTER ════════ -->
+    <footer>
+        <p>© 2026 <span>Priti</span>. Designed &amp; Built with ❤️</p>
+        <div class="footer-socials">
+            <a href="#" title="Instagram">📸</a>
+            <a href="https://www.linkedin.com/in/priti-halder-72356937a/" title="LinkedIn" target="_blank" rel="noopener">💼</a>
+            <a href="https://github.com/pritis-tech" title="GitHub" target="_blank" rel="noopener">🐙</a>
+        </div>
+    </footer>
+
+    <!-- Typed.js CDN -->
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <!-- Main script -->
+    <script src="main.js"></script>
+
+</body>
+</html>
